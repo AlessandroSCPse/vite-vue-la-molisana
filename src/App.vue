@@ -8,12 +8,34 @@ export default {
     AppHeader,
     AppProductsList,
     AppFooter
+  },
+  data() {
+    return {
+      links: [
+        {
+          text: 'Home',
+          active: false
+        },
+        {
+          text: 'Prodotti',
+          active: true
+        },
+        {
+          text: 'Chi siamo',
+          active: false
+        },
+        {
+          text: 'Contatti',
+          active: false
+        },
+      ],
+    };
   }
 }
 </script>
 
 <template>
-  <AppHeader></AppHeader>
+  <AppHeader :links="links"></AppHeader>
 
   <main>
     <AppProductsList></AppProductsList>

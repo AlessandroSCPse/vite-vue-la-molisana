@@ -1,28 +1,7 @@
 <script>
 export default {
     name: 'AppHeader',
-    data() {
-        return {
-            links: [
-                {
-                    text: 'Home',
-                    active: false
-                },
-                {
-                    text: 'Prodotti',
-                    active: true
-                },
-                {
-                    text: 'Chi siamo',
-                    active: false
-                },
-                {
-                    text: 'Contatti',
-                    active: false
-                },
-            ],
-        }
-    }
+    props: ['links']
 }
 </script>
 
@@ -48,6 +27,11 @@ export default {
 .logo {
     text-align: center;
     padding: 15px 0;
+
+    img {
+        width: 250px;
+        margin: 0 auto;
+    }
 }
 
 nav {
